@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,6 +8,7 @@
     <link rel="stylesheet" href="./assets/css/styles.css">
     <title>Quiz Me!</title>
 </head>
+
 <body>
     <!-- Navigation -->
     <nav class="nav">
@@ -16,15 +18,33 @@
 
     <!-- Header & Start Button -->
     <header>
-        <h1>Quiz: Me</h1>
+        <h1>Quiz: </h1>
     </header>
 
     <!-- Quiz Slider -->
     <main class="main">
         <section class="col quiz">
-            <h2>Start Quiz</h2>
-            <p>Test your skills!</p>
-            <button class="start-btn">Start</button>
+            <div class="start" id="start-quiz">
+                <h2>Start Quiz</h2>
+                <p>Test your skills!</p>
+                <button id="start-btn">Start Quiz</button>
+            </div>
+
+            <!-- Hidden Until Started -->
+            <div class="hide" id="questions">
+                <h2 id="question-title"></h2>
+                <div id="choices" class="choices"></div>
+            </div>
+
+            <div class="hide" id="end-quiz">
+                <h2>Completed!</h2>
+                <p>Your score is <span id="final-score"></span>.</p>
+                <p>Enter initials: <input type="text" id="initials" max="4" />
+                <button id="submit">Submit</button>
+                </p>
+            </div>
+
+            <div class="feedback hide" id="feedback"></div>
         </section>
 
         <!-- Sidebar for Live Score -->
@@ -32,7 +52,7 @@
             <h2>Timer</h2>
             <p class="timer">Time: <span id="time">0</span></p>
 
-            <div class="scores"><a href="score.html">View Highscores</a></div>
+            <div class="scores"><a href="./assets/html/scores.html">View Highscores</a></div>
 
         </aside>
     </main>
@@ -41,5 +61,9 @@
         <h3>Contact</h3>
         <a href="#">GitHub</a>
     </footer>
+    
+    <script src="./assets/js/questions.js"></script>
+    <script src="./assets/js/script.js"></script>
 </body>
+
 </html>

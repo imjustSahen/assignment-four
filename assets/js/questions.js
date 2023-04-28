@@ -1,7 +1,7 @@
-var myQuestions = [
+var questions = [
 	{
 		question: "What is 10/2?",
-		answers: {
+		choices: {
 			a: '3',
 			b: '5',
 			c: '115'
@@ -10,7 +10,7 @@ var myQuestions = [
 	},
 	{
 		question: "What is 30/3?",
-		answers: {
+		choices: {
 			a: '3',
 			b: '5',
 			c: '10'
